@@ -19,6 +19,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        /**
+         * Set client url dynamically based on the request origin.
+         */
+        $client_url = request()->header('origin') ?? 'https://survey-app.tobiolanitori.com';
+        config(['app.client_url' => $client_url]);
     }
 }

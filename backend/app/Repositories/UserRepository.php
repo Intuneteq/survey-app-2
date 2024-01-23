@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Exceptions\BadRequestException;
 use App\Models\User;
+use Illuminate\Auth\Events\Registered;
 
 class UserRepository
 {
@@ -21,7 +22,7 @@ class UserRepository
 
         $user->save();
 
-        // event(new Registered($user));
+        event(new Registered($user));
 
         return $user;
     }
