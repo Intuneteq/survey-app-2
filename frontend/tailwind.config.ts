@@ -2,6 +2,7 @@
 
 import defaultTheme from "tailwindcss/defaultTheme";
 
+
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -9,6 +10,7 @@ export default {
       fontFamily: {
         sans: [defaultTheme.fontFamily.sans],
       },
+
       // fontSize: {},
       // colors: {},
     },

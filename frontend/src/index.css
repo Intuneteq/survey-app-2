@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.linerblue {
+    border: 1px solid blue;
+}
+
+.linergreen {
+    border: 1px solid green;
+}
+
+.linerred {
+    border: 1px solid red;
+}
+
+.linerblack {
+    border: 1px solid black;
+}
