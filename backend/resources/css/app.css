@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#api {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    color: #3a82ee;
+}
