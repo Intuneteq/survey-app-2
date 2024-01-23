@@ -14,8 +14,8 @@ export default function Login() {
         </div>
         <div className="w-[40%] h-full">
           <div className="flex-col flex justify-center items-center mt-[6.88rem] w-full">
-            <h1 className="text-[#FFF] text-[3.75rem] font-[900] leading-normal">Welcome Back</h1>
-            <p className="text-[#BDBBBB] text-[1.25rem] font-[500] leading-normal">Kindly input your information to obtain access.</p>
+            <h1 className="text-[#FFF] text-[3.75rem] font-[900] leading-normal ">Welcome Back</h1>
+            <p className="text-[#BDBBBB] text-[1.25rem] font-[500] leading-normal ">Kindly input your information to obtain access.</p>
           </div>
 
           <section className="mt-[6.44rem] w-full">
