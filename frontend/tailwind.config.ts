@@ -8,8 +8,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: [defaultTheme.fontFamily.sans],
+        sans: ['MuseoModerno', defaultTheme.fontFamily.sans],
       },
+
+
 
       // fontSize: {},
       // colors: {},
