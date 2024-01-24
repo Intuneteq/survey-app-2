@@ -16,7 +16,7 @@ export default function Register() {
   const { google, apple } = Images;
 
   return (
-    <section className="pt-[6.88rem] pb-[5.06rem]">
+    <section className="py-20 xl:py-24">
       <AuthHeader
         title="Welcome!"
         subTitle="Kindly submit your details to register."
@@ -101,8 +101,14 @@ export default function Register() {
               <div className="w-[22.125rem] text-white">
                 <small className="text-[0.75rem] font-normal">
                   I agree to Typeform’s{" "}
-                  <button type="button" className="underline">Terms of Service</button>,{" "}
-                  <button type="button" className="underline">Privacy Policy</button> and{" "}
+                  <button type="button" className="underline">
+                    Terms of Service
+                  </button>
+                  ,{" "}
+                  <button type="button" className="underline">
+                    Privacy Policy
+                  </button>{" "}
+                  and{" "}
                   <button type="button" className="underline">
                     Data Processing Agreement
                   </button>

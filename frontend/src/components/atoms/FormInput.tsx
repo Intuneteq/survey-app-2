@@ -16,7 +16,7 @@ type Props = {
 
   readOnly?: boolean;
 
-  hideLabel?: boolean;
+  hideLabel?: boolean; // Hide the label Element for the inputs
 
   children?: ReactNode;
 };
