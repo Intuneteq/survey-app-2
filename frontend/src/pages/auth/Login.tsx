@@ -19,8 +19,7 @@ export default function Login() {
       <section className="mt-[6.44rem] w-full">
         <form className="flex justify-center">
           <div className="flex-col space-y-[1.16rem]">
-            <div className="relative">
-              <i className="fa fa-telephone"></i>
+            <div className="">
               <input
                 className="border-[1px] border-[#675E5E] rounded-[0.5rem] w-[24.625rem] h-[2.5rem] bg-transparent p-[0.5rem] text-[#FFF]"
                 type="text"
@@ -80,7 +79,7 @@ export default function Login() {
       <section className="mt-[13.06rem]">
         <div className="flex justify-center">
           <p className="text-[#FFF] text-[1.25rem] font-[400] leading-normal">
-            Have no account yet?{" "}
+            Have no account yet?
             <span className="text-[#FFF5C1] ml-[0.62rem]">Sign Up</span>
           </p>
         </div>
