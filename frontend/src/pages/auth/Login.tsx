@@ -83,6 +83,7 @@ export default function Login() {
             <span className="text-[#FFF5C1] ml-[0.62rem]">Sign Up</span>
           </p>
         </div>
+
       </section>
     </>
   );
