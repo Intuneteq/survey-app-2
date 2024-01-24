@@ -10,7 +10,10 @@ export default {
       fontFamily: {
         sans: ['MuseoModerno', defaultTheme.fontFamily.sans],
       },
-
+      colors: {
+        'primary': "#239D60",
+        'secondary': "#FFF5C1"
+      }
 
 
       // fontSize: {},

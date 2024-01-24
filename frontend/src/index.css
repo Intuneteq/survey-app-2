@@ -1,22 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .linerblue {
-    border: 1px solid blue;
+  border: 1px solid blue;
 }
 
-
 .linergreen {
-    border: 1px solid green;
+  border: 1px solid green;
 }
 
 .linerred {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
 .linerblack {
-    border: 1px solid black;
+  border: 1px solid black;
+}
+
+/** 
+*custom class for vertical scrolling on a fixed height screen
+*/
+.scroll-vertical {
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

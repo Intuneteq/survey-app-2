@@ -6,14 +6,14 @@ export default function AuthLayout() {
   const { welcome } = Images;
 
   return (
-    <main className="w-full h-[64rem] bg-[#239D60]">
+    <main className="w-full h-screen bg-primary">
       <div className="flex w-full h-full">
-        <div className="flex justify-center w-[60%] h-full bg-[#FFF5C1] rounded-tr-[6.2rem] rounded-br-[6.2rem] relative ">
-          <div className=" w-[43.125rem] h-[38.125rem] object-contain absolute bottom-[3.44rem]">
-            <img src={welcome} alt="welcome" />
+        <div className="flex justify-center items-end w-[60%] h-full bg-secondary rounded-tr-[2rem] rounded-br-[2rem] 2xl:rounded-tr-[6.2rem] 2xl:rounded-br-[6.2rem] py-[3.44rem] px-[6.56rem]">
+          <div className="w-[30rem] h-[25rem] 2xl:w-[43.125rem] 2xl:h-[38.125rem] flex justify-center items-center">
+            <img src={welcome} alt="welcome" className="w-full h-full object-contain" />
           </div>
         </div>
-        <div className="w-[40%] h-full">
+        <div className="w-[40%] h-full scroll-vertical">
           <Outlet />
         </div>
       </div>

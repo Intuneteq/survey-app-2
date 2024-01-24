@@ -7,8 +7,8 @@ export default function Register() {
   const { google, apple } = Images;
 
   return (
-    <main>
-      <div className="flex-col flex justify-center items-center mt-[6.88rem] w-full">
+    <section>
+      {/* <div className="flex-col flex justify-center items-center mt-[6.88rem] w-full">
         <h1 className="text-[#FFF] text-[3.75rem] font-[900] leading-normal ">
           Welcome!
         </h1>
@@ -16,7 +16,7 @@ export default function Register() {
           Kindly submit your details to register.
         </p>
       </div>
-      <section className="mt-[6.44rem] w-full">
+      <article className="mt-[6.44rem] w-full">
         <form className="flex justify-center ">
           <div className="flex-col space-y-[1.16rem]">
             <div className="">
@@ -92,19 +92,19 @@ export default function Register() {
             </div>
           </div>
         </div>
-      </section>
+      </article>
 
-      <section className="mt-[4.94rem]">
+      <article className="mt-[4.94rem]">
         <div className="flex justify-center">
           <p className="text-[#FFF] text-[1.25rem] font-[400] leading-normal">
             Already Registered?
             <span className="text-[#FFF5C1] ml-[0.62rem]"> <a href="#">Log in</a></span>
           </p>
         </div>
-      </section>
+      </article> */}
 
 
-    </main>
+    </section>
 
   )
 }
