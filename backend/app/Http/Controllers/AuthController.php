@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\OAuthEnum;
 use App\Exceptions\BadRequestException;
 use App\Exceptions\UnAuthorizedException;
 use App\Exceptions\UnprocessableException;
 use App\Http\Requests\LoginRequest;
+use App\Http\Requests\OAuthRequest;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Resources\UserResource;
 use App\Mail\EmailVerification;
@@ -15,6 +17,9 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules\Enum;
+use Laravel\Socialite\Facades\Socialite;
 use Mail;
 
 class AuthController extends Controller
@@ -51,6 +56,59 @@ class AuthController extends Controller
         }
 
         $user = Auth::user();
+
+        $token = $user->createToken('access-token')->plainTextToken;
+
+        $result = ['user' => new UserResource($user), 'token' => $token];
+
+        return new JsonResponse($result);
+    }
+
+    public function oAuthRedirect(Request $request)
+    {
+        $provider = $request->query('provider');
+
+        $validator = Validator::make(['provider' => $provider], [
+            'provider' => ['required', new Enum(OAuthEnum::class)]
+        ]);
+
+        if ($validator->fails()) {
+            throw new UnprocessableException($validator->errors()->first());
+        }
+
+        $redirect_url = Socialite::driver($provider)->stateless()->redirect()->getTargetUrl();
+
+        return response(['provider' => $provider, 'redirect_url' => $redirect_url], 200)
+            ->header('Content-Type', 'application/json')
+            ->header('Access-Control-Allow-Origin', '*');
+    }
+
+    public function oAuthCallback(OAuthRequest $request)
+    {
+        $validated = $request->validated();
+
+        $oauthUser = null;
+        try {
+            $oauthUser = Socialite::driver($validated['provider'])->stateless()->user();
+        } catch (\Throwable $th) {
+            throw new BadRequestException($th->getMessage());
+        }
+
+        $user = User::firstWhere('email', $oauthUser->email);
+
+        if (!$user) {
+            $credentials = [
+                'name' => $oauthUser->name,
+                'email' => $oauthUser->email,
+            ];
+            // Sign up user
+            $user = $this->userRepository->createUser($credentials);
+        } else {
+            // Login user
+            Auth::login($user);
+
+            $user = Auth::user();
+        }
 
         $token = $user->createToken('access-token')->plainTextToken;
 

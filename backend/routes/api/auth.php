@@ -12,6 +12,9 @@ Route::group([
     Route::post('/login', [AuthController::class, 'login']);
     Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
+    Route::get('/oauth/redirect', [AuthController::class, 'oAuthRedirect']);
+    Route::post('/oauth/callback', [AuthController::class, 'oAuthCallback']);
+
     Route::get('email/verify/{id}', [AuthController::class, 'verify'])->name('verification.verify'); // Make sure to keep this as your route name
     Route::get('email/resend', [AuthController::class, 'resend'])->name('verification.resend')->middleware('auth:sanctum');
 });
