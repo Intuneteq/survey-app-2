@@ -22,7 +22,7 @@ export default function Register() {
         subTitle="Kindly submit your details to register."
       />
 
-      <article className="mt-[5.31rem] w-full max-w-[24.625rem] mx-auto mb-[4.94rem] linerblue">
+      <article className="pt-[5.31rem] w-full max-w-[24.625rem] mx-auto pb-[4.94rem] ">
         <form className="">
           <div className="flex-col space-y-[1.16rem]">
             <div className="w-full relative">
