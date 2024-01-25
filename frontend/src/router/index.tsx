@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import { AuthLayout } from "../pages/auth";
-import { PublicLayout } from "../pages/public";
+import { PublishedLayout } from "../pages/published";
 
 import { authRoutes } from "./auth";
-import { publicRoutes } from "./public";
+import { publishedRoutes } from "./published";
 
 const router = createBrowserRouter([
   {
@@ -13,9 +13,9 @@ const router = createBrowserRouter([
     children: authRoutes,
   },
   {
-    path: "/public",
-    element: <PublicLayout />,
-    children: publicRoutes
+    path: "/published",
+    element: <PublishedLayout />,
+    children: publishedRoutes
   }
 ]);
 
