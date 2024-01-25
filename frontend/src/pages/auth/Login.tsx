@@ -15,7 +15,7 @@ export default function Login() {
   return (
     <>
       <section>
-        <div className="flex-col flex justify-center items-center mt-[6.88rem] w-full">
+        <div className="flex-col flex justify-center items-center pt-[6.88rem] w-full">
           <AuthHeader
             title="Welcome Back"
             subTitle="Kindly input your information to obtain access."
@@ -23,8 +23,8 @@ export default function Login() {
         </div>
       </section>
 
-      <section className=" mt-[6.44rem] mb-[4.94rem] ">
-        <div className="flex justify-center ">
+      <section className="py-[6.44rem]">
+        <div className="flex justify-center">
           <form className="">
             <div className="flex-col  space-y-[1.16rem]">
               <div className="w-full relative ">
@@ -70,7 +70,7 @@ export default function Login() {
         </div>
       </section>
 
-      <section className="w-full flex justify-center mt-[5rem]">
+      <section className="w-full flex justify-center pt-[5rem]">
         <div className="w-[22.5rem] justify-center space-y-[0.5rem]">
           <div className="w-full flex items-center justify-center">
             <AuthButton text="Log in" width="22.5rem" height="3.75rem" />
@@ -88,7 +88,7 @@ export default function Login() {
         </div>
       </section>
 
-      <section className="mt-[13.06rem]">
+      <section className="pt-[13.06rem]">
         <AuthFooter
           text="Have no account yet?"
           linkText="Sign Up"
