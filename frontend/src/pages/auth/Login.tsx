@@ -67,7 +67,13 @@ export default function Login() {
               </div>
               <div className="w-[22.5rem] justify-center space-y-[0.5rem] pt-[5rem]">
                 <div className="w-full flex items-center justify-center">
-                  <AuthButton text="Log in" width="22.5rem" height="3.75rem" />
+                  <AuthButton
+                    text="Log in"
+                    width="22.5rem"
+                    height="3.75rem"
+                    backgroundColor="#FFF5C1"
+                    color="#000"
+                  />
                 </div>
                 <div className="flex justify-center">
                   <p className="text-[#FFF] text-[1.25rem] font-[500] leading-normal">

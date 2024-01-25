@@ -3,6 +3,8 @@ import histogram from "./histogram.png";
 import welcome from "./OBJECTS.png";
 import google from "./Google svg.png";
 import apple from "./Apple Svg.png"
+import picture from "./Rectangle 16.png"
+import backImg from "./Rectangle 93.png"
 
 // Make sure us export it by passing it into this images object.
 const Images = {
@@ -10,6 +12,8 @@ const Images = {
   welcome,
   google,
   apple,
+  picture,
+  backImg,
 };
 
 

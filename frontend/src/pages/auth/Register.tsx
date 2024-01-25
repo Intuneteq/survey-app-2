@@ -120,7 +120,13 @@ export default function Register() {
           <div className=" w-full flex justify-center pt-[5rem]">
             <div className=" w-[22.5rem] justify-center space-y-[0.5rem]">
               <div className=" w-full flex items-center justify-center">
-                <AuthButton width="22.5rem" height="3.75rem" text="Sign Up" />
+                <AuthButton
+                  width="22.5rem"
+                  height="3.75rem"
+                  text="Sign Up"
+                  backgroundColor="#FFF5C1"
+                  color="#000"
+                />
               </div>
               <div className="flex justify-center">
                 <p className="text-[#FFF] text-[1.25rem] font-[500] leading-normal">
