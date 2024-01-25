@@ -117,7 +117,7 @@ export default function Register() {
               </div>
             </FormInput>
           </div>
-          <div className=" w-full flex justify-center mt-[5rem]">
+          <div className=" w-full flex justify-center pt-[5rem]">
             <div className=" w-[22.5rem] justify-center space-y-[0.5rem]">
               <div className=" w-full flex items-center justify-center">
                 <AuthButton width="22.5rem" height="3.75rem" text="Sign Up" />
