@@ -17,6 +17,10 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: "8.2"
+      - name: Debug Output
+        run: |
+          pwd
+          ls -la
       - name: Install Packages
         run: |
           cd /home/u623889396/domains/tobiolanitori.com/public_html/surveylite
