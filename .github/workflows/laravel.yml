@@ -19,7 +19,7 @@ jobs:
           php-version: "8.2"
       - name: Install Packages
         run: |
-          cd /home/u623889396/domains/tobiolanitori.com/public_html/surveylite/backend
+          cd /home/u623889396/domains/tobiolanitori.com/public_html
           composer install --no-dev
 
       - name: autoload
