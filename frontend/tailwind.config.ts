@@ -20,8 +20,10 @@ export default {
         xl: "1300px",
         // => @media (min-width: 1300px) { ... }
       },
+      backgroundImage: {
+        published: "url('/published.png')",
+      }
       // fontSize: {},
-      // colors: {},
     },
   },
   plugins: [],

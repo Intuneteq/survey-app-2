@@ -2,10 +2,10 @@ import { Images } from "../../assets";
 import { AuthButton } from "../../components/atoms";
 
 export default function PublishedLayout() {
-  const { picture, backImg } = Images;
+  const { picture } = Images;
 
   return (
-    <main className="" style={{ backgroundImage: `url(${backImg})` }}>
+    <main className="bg-published bg-cover bg-no-repeat bg-center" >
       <div className=" flex justify-center">
         <div className="  max-w-[53.75rem] py-[5.19rem]">
           <div className="w-full flex justify-center">
