@@ -13,7 +13,8 @@ export default {
         primary: "#239D60",
         secondary: "#FFF5C1",
         white: "#FFF",
-        grey: "#BDBBBB"
+        grey: "#BDBBBB",
+        black: "#000"
       },
 
       screens: {

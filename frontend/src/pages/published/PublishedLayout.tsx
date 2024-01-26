@@ -7,7 +7,6 @@ export default function PublishedLayout() {
   const { picture } = Images;
 
   return ( 
-    // This will be nested inside the Published Layout so you should not have a main tag here. Youre still on the same page. Instead of having everything in one page, we just separated them so we can reuse some part of it, take note. I am going to correct it, I just want you to see this.
     <main className="bg-published bg-cover bg-no-repeat bg-center" >
       <div className=" flex justify-center">
         <div className="  max-w-[53.75rem] py-[5.19rem]">
