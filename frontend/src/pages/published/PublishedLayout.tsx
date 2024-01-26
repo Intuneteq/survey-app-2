@@ -1,5 +1,7 @@
 import { Images } from "../../assets";
 import { AuthButton } from "../../components/atoms";
+import IntroHeader from "../../components/molecules/IntroHeader";
+import IntroBody from "../../components/molecules/IntroBody";
 
 export default function PublishedLayout() {
   const { picture } = Images;
@@ -19,20 +21,15 @@ export default function PublishedLayout() {
           </div>
 
           <div className="w-full text-center ">
-            <h1 className=" text-[#000] text-[6.25rem] font-[700] leading -normal">
-              Lorem ipsum
-            </h1>
-            <h4 className="text-[#434242] text-[1.5rem] font-[700] leading-normal">
-              Expiry Date: DD-MM-YYYY
-            </h4>
-            <p className=" text-[#434242] text-[1.375rem] font-[400] leading-normal">
-              Lorem ipsum dolor sit amet consectetur. Habitant lacus morbi
-              suspendisse egestas dignissim venenatis tortor. Proin elementum
-              lectus id risus.
-            </p>
-            <p className=" text-[#434242] text-[1.5rem] font-[400] leading-normal py-[3.19rem] ">
-              20 questions
-            </p>
+            <IntroHeader
+              title="Lorem ipsum"
+              subtitle="Expiry Date: DD-MM-YYYY"
+            />
+            <IntroBody
+              text="Lorem ipsum dolor sit amet consectetur. Habitant lacus morbi suspendisse egestas dignissim venenatis tortor. Proin elementum lectus id risus."
+              num="20"
+            />
+
             <div className=" flex justify-center">
               <AuthButton
                 width="10.9375rem"
