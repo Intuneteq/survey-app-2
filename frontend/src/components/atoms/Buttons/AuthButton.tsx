@@ -2,8 +2,8 @@ type Props = {
   width: string;
   height: string;
   text: string;
-  backgroundColor: "string";
-  color: "string";
+  backgroundColor: string;
+  color: string;
 };
 
 export default function AuthButton({
