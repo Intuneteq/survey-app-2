@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.liner {
+  border: 1px solid red;
+}
+
 .linerblue {
   border: 1px solid blue;
 }
