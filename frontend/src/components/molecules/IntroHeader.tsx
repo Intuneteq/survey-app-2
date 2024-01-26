@@ -5,7 +5,7 @@ type props = {
 
 function IntroHeader({ title, subtitle }: props) {
   return (
-    <div>
+    <div className="text-center">
       <h1 className=" text-[#000] text-[6.25rem] font-[700] leading -normal">
         {title}
       </h1>

@@ -5,7 +5,7 @@ type props = {
 
 function IntroBody({ text, num }: props) {
   return (
-    <div>
+    <div className="text-center">
       <p className=" text-[#434242] text-[1.375rem] font-[400] leading-normal">
         {text}
       </p>
