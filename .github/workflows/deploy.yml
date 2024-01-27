@@ -75,7 +75,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Install Dependencies
-        run: composer2 install --optimize-autoloader --no-dev
+        run: composer install --optimize-autoloader --no-dev
 
       - name: Give checkout permission
         run: chmod -R 777 /home/u623889396/domains/tobiolanitori.com/public_html/surveylite
