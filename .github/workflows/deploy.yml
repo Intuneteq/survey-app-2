@@ -50,7 +50,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: "65002"
           password: ${{ secrets.PASSSWORD }}
-          script: "cd /home/u623889396/domains/tobiolanitori.com/public_html/surveylite && deploy.sh"
+          script: "cd /home/u623889396/domains/tobiolanitori.com/public_html/surveylite  && chmod +x deploy.sh"
 
           # script: |
           #   cd /home/u623889396/domains/tobiolanitori.com/public_html/surveylite && chmod +x deploy.sh
