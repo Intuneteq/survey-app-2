@@ -19,11 +19,18 @@ jobs:
       - name: Build Project
         run: npm run build
 
+      - name: Configure SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+
       - name: Push to Build Branch
         run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Actions"
-          git remote set-url origin "https://github.com/${{ github.repository }}"
+          git remote set-url origin "git@github.com:${{ github.repository }}"
           git checkout -b build
           git add .
           git commit -m "Build and deploy updates"
