@@ -98,5 +98,5 @@ jobs:
       - name: Generate storage link
         run: php artisan storage:link
 
-      # - name: Migrate Database
-      #   run: php artisan migrate:fresh --force
+      - name: Migrate Database
+        run: php artisan migrate:fresh
