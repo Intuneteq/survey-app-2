@@ -78,7 +78,7 @@ jobs:
         run: composer install --optimize-autoloader --no-dev
 
       - name: Directory Permissions
-        run: chmod -R 777 storage bootstrap/cache
+        run: chmod -R 777 storage bootstrap/cache && chmod -R 777 deploy.sh
 
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
@@ -98,5 +98,11 @@ jobs:
       - name: Generate storage link
         run: php artisan storage:link
 
-      - name: Migrate Database
-        run: php artisan migrate:fresh --force
+      - name: executing remote ssh commands to deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: "65002"
+          password: ${{ secrets.PASSSWORD }}
+          script: "cd /home/u623889396/domains/tobiolanitori.com/public_html/surveylite && ./deploy.sh"

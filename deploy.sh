@@ -27,6 +27,6 @@ echo "Deploying application"
     # script permissions
     chmod -R 777 deploy.sh
 #exit maintainance mode
-php artisan up
+# php artisan up
 
 echo "Website deployed"
