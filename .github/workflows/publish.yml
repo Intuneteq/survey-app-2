@@ -19,7 +19,7 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      - name: Configure SSH Key
+      - name: Configure SSH Keyy
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
