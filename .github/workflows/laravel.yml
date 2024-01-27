@@ -1,27 +1,27 @@
-name: Laravel
+# name: Laravel
 
-on:
-  push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
+# on:
+#   push:
+#     branches: ["main"]
+#   pull_request:
+#     branches: ["main"]
 
-jobs:
-  build:
-    name: Build and Deploy
-    runs-on: ubuntu-latest
-    steps:
-      - name: Changed Repository
-        uses: actions/checkout@v3
-      - name: Setup Enviroment
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: "8.2"
+# jobs:
+#   build:
+#     name: Build and Deploy
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Changed Repository
+#         uses: actions/checkout@v3
+#       - name: Setup Enviroment
+#         uses: shivammathur/setup-php@v2
+#         with:
+#           php-version: "8.2"
 
-      - name: Debug Output
-        run: |
-          pwd
-          ls -la
+#       - name: Debug Output
+#         run: |
+#           pwd
+#           ls -la
       # - name: Install Packages
       #   run: cd "/home/u623889396/domains/tobiolanitori.com/public_html/surveylite" && composer install --no-dev
           
@@ -60,25 +60,29 @@ jobs:
       #       cd /home/u623889396/domains/tobiolanitori.com/public_html/surveylite/backend && chmod +x deploy.sh
       #       cd /home/u623889396/domains/tobiolanitori.com/public_html/surveylite/backend
       #       ./deploy.sh
-# name: Laravel
+name: Laravel
 
-# on:
-#   push:
-#     branches: ["main"]
-#   pull_request:
-#     branches: ["main"]
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
-# jobs:
-#   laravel-tests:
-#     runs-on: ubuntu-latest
+jobs:
+  laravel-tests:
+    runs-on: ubuntu-latest
 
-#     steps:
-#       - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
-#         with:
-#           php-version: "8.2"
-#       - uses: actions/checkout@v3
-#       - name: Copy .env
-#         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+    steps:
+      - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
+        with:
+          php-version: "8.2"
+      - uses: actions/checkout@v3
+      - name: Copy .env
+        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+      - name: Debug Output
+        run: |
+          pwd
+          ls -la
 
 #       - name: Install Dependencies
 #         # run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
