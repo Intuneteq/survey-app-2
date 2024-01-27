@@ -100,10 +100,3 @@ jobs:
 
       # - name: Migrate Database
       #   run: php artisan migrate:fresh --force
-
-      - name: Give permissions
-        run:  |
-          chown -R www-data.www-data /home/u623889396/domains/tobiolanitori.com/public_html/surveylite/storage
-          chown -R www-data.www-data /home/u623889396/domains/tobiolanitori.com/public_html/surveylite/bootstrap/cache
-          chmod -R 777 /home/u623889396/domains/tobiolanitori.com/public_html/surveylite/storage
-          chmod -R 777 /home/u623889396/domains/tobiolanitori.com/public_html/surveylite/bootstrap/cache
