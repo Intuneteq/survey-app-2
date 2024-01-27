@@ -28,6 +28,11 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
 
+      - name: Set Git User Identity
+        run: |
+          git config --global user.email "tobiolanitori@gmail.com"
+          git config --global user.name "Tobi Olanitori"
+
       - name: Push to Build Branch
         run: |
           git remote set-url origin "git@github.com:${{ github.repository }}"
