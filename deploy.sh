@@ -3,6 +3,11 @@ set -e
 echo "Deploying application"
 
 #Enter maintenance mode
+ #update codebase
+
+    # git pull origin v1
+    git fetch origin master
+    git reset --hard origin/master
 
     composer2 install
 
