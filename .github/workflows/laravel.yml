@@ -17,16 +17,14 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: "8.2"
+          
+      - name: Install Packages
+        run: cd "/home/u623889396/domains/tobiolanitori.com/public_html/surveylite/backend" && composer install --no-dev
+          
       - name: Debug Output
         run: |
           pwd
           ls -la
-      - name: Install Packages
-        run: |
-          cd /home/u623889396/domains/tobiolanitori.com/public_html/surveyappapi
-          composer install --no-dev
-          shell: bash
-
       - name: autoload
         run: composer dump-autoload
 
