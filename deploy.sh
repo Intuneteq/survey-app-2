@@ -4,12 +4,12 @@ echo "Deploying application"
 
 #Enter maintenance mode
 
-(php artisan down --message='The website is been quickly updated. Please tey again in minutes.') || true
+# (php artisan down --message='The website is been quickly updated. Please tey again in minutes.') || true
   #update codebase
 
     # git pull origin v1
-    git fetch origin master
-    git reset --hard origin/master
+    # git fetch origin master
+    # git reset --hard origin/master
 
     composer2 install
     # composer2 install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist --no-dev
