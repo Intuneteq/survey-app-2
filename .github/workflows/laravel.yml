@@ -81,7 +81,8 @@ jobs:
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
 
       - name: Install Dependencies
-        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        # run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer install --no-dev
 
       - name: Directory Permissions
         run: chmod -R 777 storage backend/bootstrap/cache && chmod -R 777 deploy.sh
