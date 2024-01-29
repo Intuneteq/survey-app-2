@@ -1,5 +1,3 @@
-import IntroHeader from "../../components/molecules/IntroHeader";
-import CheckedList from "../../components/molecules/CheckedList";
 import { Images } from "../../assets";
 import NavigationButton from "../../components/atoms/Buttons/NavigationButton";
 
@@ -7,18 +5,18 @@ export default function Checkbox() {
     const { rightarrow, leftarrow } = Images;
 
     return (
-        <div className="">
+        <div>
             <div className="flex justify-center pt-[5.25rem]">
-                <div className="w-[53.75rem] h-[37.5rem] bg-[#FFF] rounded-xl ">
-                    <div className="flex justify-center text-[2.5rem] px-[0.69rem]">
+                <div className="w-[53.75rem] h-[37.5rem] bg-[#239D60] rounded-xl relative">
+                    <div className="w-[53.75rem] h-[37.5rem] bg-[#FFF] rounded-xl absolute top-5">
+                        {/* <div className="flex justify-center text-[2.5rem] px-[0.69rem]">
                         <IntroHeader
                             title="Lorem Ipsum"
-                            fontSize="2.5rem"
                             subtitle="The purpose of an exit survey is to obtain valuable information that can be used to enhance the organization's processes, address any issues, and improve retention rates."
                         />
-                    </div>
-                    <hr />
-                    <div>
+                    </div> */}
+
+                        {/* <div>
                         <div className=" pl-[4.5rem]">
                             <p className="text-[1.875rem] font-[400] leading-normal">
                                 1. Lorem ipsum dolor sit amet consectetur.
@@ -86,6 +84,7 @@ export default function Checkbox() {
                                 </div>
                             </div>
                         </div>
+                    </div> */}
                     </div>
                 </div>
             </div>
