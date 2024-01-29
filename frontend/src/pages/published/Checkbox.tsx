@@ -13,6 +13,7 @@ export default function Checkbox() {
                     <div className="flex justify-center text-[2.5rem] px-[0.69rem]">
                         <IntroHeader
                             title="Lorem Ipsum"
+                            fontSize="2.5rem"
                             subtitle="The purpose of an exit survey is to obtain valuable information that can be used to enhance the organization's processes, address any issues, and improve retention rates."
                         />
                     </div>
