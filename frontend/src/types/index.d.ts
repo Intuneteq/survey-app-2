@@ -1,4 +1,4 @@
-type FormType =
+type FormType = // where radio dey?
   | "text"
   | "tel"
   | "email"

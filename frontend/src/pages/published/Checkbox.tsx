@@ -27,9 +27,10 @@ export default function Checkbox() {
                         <div>
                             <div>
                                 <CheckedList
-                                    type="radio"
+                                    type="radio" // you did not add radio in type FormType
                                     name="Lorem"
                                     placeholder="item1"
+                                    label="smh"
                                 />
                             </div>
                         </div>
