@@ -23,6 +23,9 @@ export default {
       },
       backgroundImage: {
         published: "url('/published.png')",
+      },
+      boxShadow: {
+        top: '0px -20px 5.4px -2px #239D60',
       }
       // fontSize: {},
     },
