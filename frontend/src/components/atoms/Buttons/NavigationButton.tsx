@@ -2,12 +2,12 @@ import { ReactNode } from "react";
 
 type props = {
     text: string;
-    width: string;
-    height: string;
-    backgroundColor: string;
-    borderRadius: string;
-    color: string;
-    children: ReactNode;
+    width?: string;
+    height?: string;
+    backgroundColor?: string;
+    borderRadius?: string;
+    color?: string;
+    children?: ReactNode;
 };
 
 export default function NavigationButton({
