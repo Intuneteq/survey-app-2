@@ -4,16 +4,16 @@
 //   console.log(item);
 // });
 const sublist = [
-  "Lorem ipsum",
-  "Lorem ipsum dolor",
-  "Lorem ipsum dolor sit amet",
-  "Lorem ipsum dolor sit amet consectetur.",
+    "Lorem ipsum",
+    "Lorem ipsum dolor",
+    "Lorem ipsum dolor sit amet",
+    "Lorem ipsum dolor sit amet consectetur.",
 ];
 
 function CheckedList() {
-  return sublist.map((item) => {
-    console.log(item);
-  });
+    return sublist.map((item) => {
+        console.log(item);
+    });
 }
 
 export default CheckedList;

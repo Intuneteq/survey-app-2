@@ -1,40 +1,19 @@
 import { ReactNode } from "react";
 
-type Props = {
+type props = {
     children: ReactNode;
 };
 
-const options = [
-    {
-        id: 1,
-        option: "option 1",
-    },
-    {
-        id: 2,
-        option: "option 2",
-    },
-    {
-        id: 3,
-        option: "option 3",
-    },
-];
-
-export default function Background({ children }: Props) {
+const Background = ({ children }: props) => {
     return (
-        <section className="w-full h-full flex justify-center items-center">
-            <div className="w-[53.75rem] h-[37.5rem] bg-[#FFF] shadow-top  rounded-xl flex justify-center items-center">
-                {options.map((option) => (
-                    <div key={option.id}>
-                        <input
-                            type="radio"
-                            name={option.option}
-                            id={option.id.toString()}
-                        />
-                        <label htmlFor={option.option}>{option.option}</label>
-                    </div>
-                ))}
-                {children}
+        <section>
+            <div className="flex justify-center pt-[5.25rem]">
+                <div className="w-[53.75rem] h-[37.5rem] bg-[#FFF] rounded-xl shadow-topshad">
+                    {children}
+                </div>
             </div>
         </section>
     );
-}
+};
+
+export default Background;
