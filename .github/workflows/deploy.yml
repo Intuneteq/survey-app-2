@@ -49,7 +49,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: "65002"
           password: ${{ secrets.PASSSWORD }}
-          script: "/home/u623889396/domains/tobiolanitori.com/public_html/surveylite-api && ./deploy.sh"
+          script: "cd /home/u623889396/domains/tobiolanitori.com/public_html/surveylite-api && ./deploy.sh"
 # name: Survey Lite Backend Deploy
 
 # on:
