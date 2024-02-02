@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import Background from "./Background";
 
 type props = {
-    children: ReactNode;
+    children?: ReactNode;
     text:string;
     subtext:string;
 };

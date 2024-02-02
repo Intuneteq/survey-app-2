@@ -11,7 +11,8 @@ type FormType = // where radio dey?
   | "time"
   | "date"
   | "number"
-  | "checkbox";
+  | "checkbox"
+  | "radio";
 
 type Svg = {
   className: string;
