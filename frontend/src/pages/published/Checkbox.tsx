@@ -2,11 +2,6 @@ import BackgroundContent from "../../components/molecules/BackgroundContent";
 
 export default function Checkbox() {
     return (
-<<<<<<< HEAD
-        <BackgroundContent>
-            
-        </BackgroundContent>
-=======
         <Background>
             <div className="w-full flex justify-center items-center ">
                 <div className=" pt-[0.63rem]">
@@ -41,6 +36,5 @@ export default function Checkbox() {
                 </div>
             </div>
         </Background>
->>>>>>> 24523791b7c4a032c7065944981245e5e0bd5cd8
     );
 }
