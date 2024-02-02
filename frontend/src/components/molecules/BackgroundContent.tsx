@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
 import Background from "./Background";
-
+import { NavigationButton } from "../atoms";
 type props = {
     children?: ReactNode;
-    text:string;
-    subtext:string;
+    text: string;
+    subtext: string;
 };
 
-export default function BackgroundContent({ children,text, subtext }: props) {
+export default function BackgroundContent({ children, text, subtext }: props) {
     return (
         <Background>
             <div className="w-full flex justify-center items-center ">
@@ -21,9 +21,17 @@ export default function BackgroundContent({ children,text, subtext }: props) {
                         </p>
                     </div>
                     <hr />
-                    <div className=" text-center pt-[0.81rem]">
-                        {children}
-                        <div></div>
+                    <div className=" text-center py-[0.81rem]">{children}</div>
+                    <div className="flex justify-between px-[2rem] mt-[5rem] ">
+                        <div>1 out of 20</div>
+
+                        <div className="space-x-[1rem]">
+                            <NavigationButton
+                                text="PREVIOUS"
+                                color="lightgrey"
+                            />
+                            <NavigationButton text="NEXT" color="#239D60" />
+                        </div>
                     </div>
                 </div>
             </div>

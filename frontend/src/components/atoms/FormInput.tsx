@@ -10,6 +10,8 @@ type Props = {
 
     name: string;
 
+    category?: string;
+
     label: string;
 
     placeholder?: string;
@@ -25,6 +27,7 @@ export default function FormInput({
     type,
     name,
     placeholder,
+    category,
     label,
     readOnly = false,
     hideLabel = false,
@@ -105,9 +108,18 @@ export default function FormInput({
 
         if (type === "radio") {
             return (
-                <div className="flex justify-start items-center" style={style}>
-                    <input type={type} name={label} />
-                    <label htmlFor={label}>{label}</label>
+                <div
+                    className="flex justify-start items-center pl-[8rem]"
+                    style={style}
+                >
+                    <input
+                        className="w-[1.5rem] h-[1.5rem]"
+                        type={type}
+                        name={category}
+                    />
+                    <label className="pl-5" htmlFor={label}>
+                        {label}
+                    </label>
                 </div>
             );
         }

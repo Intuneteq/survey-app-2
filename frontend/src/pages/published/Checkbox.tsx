@@ -3,13 +3,29 @@ import { BackgroundContent } from "../../components/molecules";
 
 export default function Checkbox() {
     const sublist = [
-        { id: 1, value: "Lorem ipsum", label: "food" },
-        { id: 2, value: "Lorem ipsum dolor", label: "wine" },
-        { id: 3, value: "Lorem ipsum dolor sit amet", label: "drinks" },
+        {
+            id: 1,
+            value: "Lorem ipsum",
+            label: "Lorem ipsum",
+            category: "checklist",
+        },
+        {
+            id: 2,
+            value: "Lorem ipsum dolor",
+            label: "Lorem ipsum dolor",
+            category: "checklist",
+        },
+        {
+            id: 3,
+            value: "Lorem ipsum dolor sit amet",
+            label: "Lorem ipsum dolor sit amet",
+            category: "checklist",
+        },
         {
             id: 4,
             value: "Lorem ipsum dolor sit amet consectetur.",
-            label: "chris",
+            label: "Lorem ipsum dolor sit amet consectetur.",
+            category: "checklist",
         },
     ];
 
@@ -18,12 +34,17 @@ export default function Checkbox() {
             text="Lorem ipsum"
             subtext="The purpose of an exit survey is to obtain valuable information that can be used to enhance the organization's processes, address any issues, and improve retention rates."
         >
-            <div>
+            <div className=" flex pl-[7rem]">
+                <h3 className="text-[1.735rem]">
+                    1 &gt; Lorem ipsum dolor sit amet consectetur
+                </h3>
+            </div>
+            <div className="space-y-[2rem] text-[1.375rem] pt-[2rem]">
                 {sublist.map((item) => (
                     <FormInput
                         key={item.id}
                         type="radio"
-                        name={item.value}
+                        name={item.category}
                         label={item.label}
                         hideLabel
                     />
