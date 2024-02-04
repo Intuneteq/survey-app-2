@@ -21,8 +21,8 @@ export default function BackgroundContent({ children, text, subtext }: props) {
                         </p>
                     </div>
                     <hr />
-                    <div className=" text-center py-[0.81rem]">{children}</div>
-                    <div className="flex justify-between px-[2rem] mt-[5rem] ">
+                    <div className=" text-center py-[0.81rem] h-[26rem]">{children}</div>
+                    <div className="flex justify-between px-[2rem]">
                         <div>1 out of 20</div>
 
                         <div className="space-x-[1rem]">

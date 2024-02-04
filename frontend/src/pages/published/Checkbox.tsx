@@ -34,9 +34,9 @@ export default function Checkbox() {
             text="Lorem ipsum"
             subtext="The purpose of an exit survey is to obtain valuable information that can be used to enhance the organization's processes, address any issues, and improve retention rates."
         >
-            <div className=" flex pl-[7rem]">
-                <h3 className="text-[1.735rem]">
-                    1 &gt; Lorem ipsum dolor sit amet consectetur
+            <div className=" flex pl-[4rem] ">
+                <h3 className="text-[1.735rem] flex items-center">
+                   <span className="text-[1.2rem] px-[1rem]">1 &gt; </span> Lorem ipsum dolor sit amet consectetur
                 </h3>
             </div>
             <div className="space-y-[2rem] text-[1.375rem] pt-[2rem]">
