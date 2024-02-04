@@ -21,6 +21,8 @@ type Props = {
     hideLabel?: boolean; // Hide the label Element for the inputs
 
     children?: ReactNode;
+
+    className?: string;
 };
 export default function FormInput({
     style,
@@ -32,6 +34,7 @@ export default function FormInput({
     readOnly = false,
     hideLabel = false,
     children,
+    className
 }: Props) {
     const [isVisible, setIsVisible] = useState(false);
 
@@ -47,6 +50,7 @@ export default function FormInput({
         "outline-none",
         "focus:border-secondary",
         "w-full",
+        className ?? ""
     ];
 
     const renderInput = () => {
