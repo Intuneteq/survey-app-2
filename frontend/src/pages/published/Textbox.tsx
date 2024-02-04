@@ -4,7 +4,6 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { AnswerHead } from "../../components/molecules";
 import { Pagination, Background } from "../../components/organisms";
 import { FormInput } from "../../components/atoms";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default function Textbox() {
