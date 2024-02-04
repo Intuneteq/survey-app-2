@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 import { AnswerHead } from "../../components/molecules";
-import { Background } from "../../components/organisms";
+import { Pagination, Background } from "../../components/organisms";
 import { FormInput } from "../../components/atoms";
 
 export default function Textbox() {
@@ -43,6 +43,9 @@ export default function Textbox() {
                             />
                         </div>
                     </div>
+                </div>
+                <div className="mt-auto">
+                    <Pagination />
                 </div>
             </div>
         </Background>
