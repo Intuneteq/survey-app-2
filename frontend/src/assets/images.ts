@@ -9,6 +9,7 @@ import rightarrow from "./ circle-right.png";
 import Logo from "./Logo.png";
 import Polygon from "./polygon.png";
 import Triangle from "./triangle.png";
+import User from "./user.png";
 
 // Make sure us export it by passing it into this images object.
 const Images = {
@@ -22,6 +23,7 @@ const Images = {
     Logo,
     Polygon,
     Triangle,
+    User
 };
 
 export default Images;
