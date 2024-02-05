@@ -49,7 +49,7 @@ export default function FormInput({
         "placeholder:text-white",
         "placeholder:capitalize",
         "outline-none",
-        "focus:border-secondary",
+        "focus:border-primary",
         "w-full",
         className ?? ""
     ];

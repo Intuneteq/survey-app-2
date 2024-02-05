@@ -9,7 +9,7 @@ export default function AuthFooter({ text, to, linkText }: Props) {
   return (
     <article className="flex justify-center items-center gap-[0.62rem]">
       <p className="text-white text-xl font-normal">{text}</p>
-      <Link to={to} className="text-secondary">
+      <Link to={to} className="text-primary hover:text-[#BAB286]">
         {linkText}
       </Link>
     </article>
