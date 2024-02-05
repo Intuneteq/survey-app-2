@@ -5,18 +5,23 @@ import { PublishedLayout } from "../pages/published";
 
 import { authRoutes } from "./auth";
 import { publishedRoutes } from "./published";
+import Home from "../pages/Home";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <AuthLayout />,
-    children: authRoutes,
-  },
-  {
-    path: "/published",
-    element: <PublishedLayout />,
-    children: publishedRoutes
-  }
+    {
+        path: "/",
+        element: <Home />,
+    },
+    {
+        path: "/",
+        element: <AuthLayout />,
+        children: authRoutes,
+    },
+    {
+        path: "/published",
+        element: <PublishedLayout />,
+        children: publishedRoutes,
+    },
 ]);
 
 export default router;

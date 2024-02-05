@@ -20,3 +20,5 @@ type Svg = {
   stroke?: string;
   fill?: string;
 };
+
+type ButtonType = "button" | "submit" | "link" | "anchor";
