@@ -35,7 +35,7 @@ export default function FormInput({
     readOnly = false,
     hideLabel = false,
     children,
-    className
+    className,
 }: Props) {
     const [isVisible, setIsVisible] = useState(false);
 
@@ -51,7 +51,7 @@ export default function FormInput({
         "outline-none",
         "focus:border-primary",
         "w-full",
-        className ?? ""
+        className ?? "",
     ];
 
     const renderInput = () => {
@@ -93,7 +93,7 @@ export default function FormInput({
 
         if (type === "checkbox") {
             return (
-                <div className="flex justify-between items-center gap-2">
+                <div className="flex justify-center items-center gap-2 w-full">
                     <input
                         type="checkbox"
                         name={name}
@@ -101,9 +101,7 @@ export default function FormInput({
                         aria-label={label}
                         aria-describedby={`error-${name}`}
                         aria-labelledby={`label-${name}`}
-                        className={
-                            defaultClasses.join(" ") + "cursor-pointer rounded"
-                        }
+                        className={defaultClasses.join(" ")}
                         style={style}
                     />
                     <label htmlFor={label}>{children}</label>
