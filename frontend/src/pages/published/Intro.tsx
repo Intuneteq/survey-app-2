@@ -51,8 +51,8 @@ export default function Intro() {
                         width="10.9375rem"
                         height="3.75rem"
                         text="Start"
-                        backgroundColor="#239D60"
-                        color="#FFF"
+                        // backgroundColor="#239D60"
+                        // color="#FFF"
                     />
                 </div>
                 <p className=" text-[#434242] text-[1.25rem] font-[400] leading-normal text-center">

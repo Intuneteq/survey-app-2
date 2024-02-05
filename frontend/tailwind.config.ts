@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import forms from '@tailwindcss/forms'
 
 import defaultTheme from "tailwindcss/defaultTheme";
 
@@ -10,8 +11,9 @@ export default {
                 sans: ["MuseoModerno", defaultTheme.fontFamily.sans],
             },
             colors: {
-                primary: "#239D60",
-                secondary: "#FFF5C1",
+                primary: "#FFF5C1",
+                secondary: "#1D2827",
+                tertiary: "#239D60",
                 white: "#FFF",
                 grey: "#BDBBBB",
                 black: "#000",
@@ -30,5 +32,5 @@ export default {
             // fontSize: {},
         },
     },
-    plugins: [],
+    plugins: [forms],
 };

@@ -1,6 +1,6 @@
 type Props = {
-    text: string;
-    subtext: string;
+    text?: string;
+    subtext?: string;
 };
 
 const AnswerHead = ({ text, subtext }: Props) => {

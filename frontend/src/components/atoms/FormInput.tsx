@@ -1,5 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CSSProperties, ReactNode, useState } from "react";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 
 type Props = {
@@ -34,7 +35,7 @@ export default function FormInput({
     readOnly = false,
     hideLabel = false,
     children,
-    className
+    className,
 }: Props) {
     const [isVisible, setIsVisible] = useState(false);
 
@@ -48,9 +49,9 @@ export default function FormInput({
         "placeholder:text-white",
         "placeholder:capitalize",
         "outline-none",
-        "focus:border-secondary",
+        "focus:border-primary",
         "w-full",
-        className ?? ""
+        className ?? "",
     ];
 
     const renderInput = () => {
@@ -92,7 +93,7 @@ export default function FormInput({
 
         if (type === "checkbox") {
             return (
-                <div className="flex justify-between items-center gap-2">
+                <div className="flex justify-center items-center gap-2 w-full">
                     <input
                         type="checkbox"
                         name={name}
@@ -100,9 +101,7 @@ export default function FormInput({
                         aria-label={label}
                         aria-describedby={`error-${name}`}
                         aria-labelledby={`label-${name}`}
-                        className={
-                            defaultClasses.join(" ") + "cursor-pointer rounded"
-                        }
+                        className={defaultClasses.join(" ")}
                         style={style}
                     />
                     <label htmlFor={label}>{children}</label>

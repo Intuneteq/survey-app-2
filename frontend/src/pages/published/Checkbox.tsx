@@ -1,5 +1,6 @@
 import { FormInput } from "../../components/atoms";
 import { BackgroundContent } from "../../components/molecules";
+import { Pagination } from "../../components/organisms";
 
 export default function Checkbox() {
     const sublist = [
@@ -36,7 +37,8 @@ export default function Checkbox() {
         >
             <div className=" flex pl-[4rem] ">
                 <h3 className="text-[1.735rem] flex items-center">
-                   <span className="text-[1.2rem] px-[1rem]">1 &gt; </span> Lorem ipsum dolor sit amet consectetur
+                    <span className="text-[1.2rem] px-[1rem]">1 &gt; </span>{" "}
+                    Lorem ipsum dolor sit amet consectetur
                 </h3>
             </div>
             <div className="space-y-[2rem] text-[1.375rem] pt-[2rem]">
@@ -49,6 +51,9 @@ export default function Checkbox() {
                         hideLabel
                     />
                 ))}
+            </div>
+            <div className="w-full ">
+                <Pagination startNumber="2" endNumber="20" />
             </div>
         </BackgroundContent>
     );

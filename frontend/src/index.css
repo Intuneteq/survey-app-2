@@ -5,30 +5,34 @@
 @tailwind utilities;
 
 .liner {
-  border: 1px solid red;
+    border: 1px solid red;
 }
 
 .linerblue {
-  border: 1px solid blue;
+    border: 1px solid blue;
 }
 
 .linergreen {
-  border: 1px solid green;
+    border: 1px solid green;
 }
 
 .linerred {
-  border: 1px solid red;
+    border: 1px solid red;
 }
 
 .linerblack {
-  border: 1px solid black;
+    border: 1px solid black;
 }
 
-/** 
+/**
 *custom class for vertical scrolling on a fixed height screen
 */
 .scroll-vertical {
-  overflow-y: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.scroll-vertical::-webkit-scrollbar {
+    display: none;
 }

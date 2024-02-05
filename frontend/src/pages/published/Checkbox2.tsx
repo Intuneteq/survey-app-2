@@ -1,5 +1,6 @@
 import { BackgroundContent } from "../../components/molecules";
 import { FormInput } from "../../components/atoms";
+import { Pagination } from "../../components/organisms";
 
 export default function Checkbox2() {
     const checklist = [
@@ -62,6 +63,9 @@ export default function Checkbox2() {
                     </div>
                 ))}
             </div>
+            <div className="w-full">
+                    <Pagination startNumber="2" endNumber="20" />
+                </div>
         </BackgroundContent>
     );
 }
