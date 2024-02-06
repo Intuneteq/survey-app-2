@@ -11,8 +11,6 @@ type Props = {
 
     name: string;
 
-    category?: string;
-
     label: string;
 
     placeholder?: string;
@@ -30,7 +28,6 @@ export default function FormInput({
     type,
     name,
     placeholder,
-    category,
     label,
     readOnly = false,
     hideLabel = false,
@@ -118,9 +115,10 @@ export default function FormInput({
                     <input
                         className="w-[1.5rem] h-[1.5rem]"
                         type={type}
-                        name={category}
+                        id={name}
+                        name={name}
                     />
-                    <label className="pl-5" htmlFor={label}>
+                    <label className="pl-5" htmlFor={name}>
                         {label}
                     </label>
                 </div>
