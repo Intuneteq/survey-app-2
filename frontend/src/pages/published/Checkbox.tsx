@@ -42,15 +42,17 @@ export default function Checkbox() {
                 </h3>
             </div>
             <div className="space-y-[2rem] text-[1.375rem] pt-[2rem]">
-                {sublist.map((item) => (
-                    <FormInput
-                        key={item.id}
-                        type="radio"
-                        name={item.category}
-                        label={item.label}
-                        hideLabel
-                    />
-                ))}
+                <form>
+                    {sublist.map((item) => (
+                        <FormInput
+                            key={item.id}
+                            type="radio"
+                            name={item.category}
+                            label={item.label}
+                            hideLabel
+                        />
+                    ))}
+                </form>
             </div>
             <div className="w-full ">
                 <Pagination startNumber="2" endNumber="20" />
