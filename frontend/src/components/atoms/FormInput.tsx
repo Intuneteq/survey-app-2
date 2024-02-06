@@ -43,7 +43,7 @@ export default function FormInput({
         "bg-transparent",
         "p-2",
         "text-[#FFF]",
-        "placeholder:text-white",
+        //"placeholder:text-white",
         "placeholder:capitalize",
         "outline-none",
         "focus:border-primary",
@@ -90,7 +90,7 @@ export default function FormInput({
 
         if (type === "checkbox") {
             return (
-                <div className="flex justify-center items-center gap-2 w-full">
+                <div className="flex justify-center items-center gap-2 w-full ">
                     <input
                         type="checkbox"
                         name={name}

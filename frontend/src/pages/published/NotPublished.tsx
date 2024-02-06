@@ -16,12 +16,13 @@ export default function NotPublished() {
                 </h4>
                 <NavigationButton
                     text="Back"
-                    // style={{
-                    //     width: "10px",
-                    //     borderRadius: "10px",
-                    //     backgroundColor: "green",
-                    // }}
-                ></NavigationButton>
+                      width= "90px"
+                      height="35px"
+                       borderRadius= "10px"
+                         backgroundColor= "green"
+                         color="white"
+                    
+                />
             </div>
         </BackgroundContent>
     );

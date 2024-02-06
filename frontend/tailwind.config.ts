@@ -32,5 +32,5 @@ export default {
             // fontSize: {},
         },
     },
-    plugins: [forms],
+    // plugins: [forms],
 };

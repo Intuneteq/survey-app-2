@@ -4,6 +4,8 @@ export default function Complete() {
     const { picture } = Images;
     return (
         <>
+            
+            <div className="min-h-screen">
             <div className="w-full flex justify-center">
                 <div className="w-[25rem] h-[25rem]">
                     <img
@@ -30,6 +32,8 @@ export default function Complete() {
                     </div>
                 </div>
             </div>
+                </div>
+                
         </>
     );
 }

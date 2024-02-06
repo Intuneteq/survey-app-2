@@ -12,6 +12,8 @@ import Triangle from "./triangle.png";
 import User from "./user.png";
 import Expired from "./download.png"
 import ClosedEye from "./eye-closed.png"
+import dashIcon from "./dashboardicon.png"
+import errorImage from "./404.png"
  
 // Make sure us export it by passing it into this images object.
 const Images = {
@@ -27,7 +29,9 @@ const Images = {
     Triangle,
     User,
     Expired,
-    ClosedEye
+    ClosedEye,
+    dashIcon,
+    errorImage,
 };
 
 export default Images;

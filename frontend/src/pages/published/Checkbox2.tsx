@@ -24,6 +24,7 @@ export default function Checkbox2() {
             name: "Lorem4",
         },
     ];
+
     return (
         <BackgroundContent
             text="Lorem Ipsum"
@@ -35,37 +36,31 @@ export default function Checkbox2() {
                     Lorem ipsum dolor sit amet consectetur
                 </h3>
             </div>
-            {/* <div className="space-y-[2rem] text-[1.375rem] pt-[2rem]">
-                {checklist.map((item) => (
-                    <FormInput
-                        key={item.id}
-                        type="checkbox"
-                        name={item.name}
-                        label={item.label}
-                        
-                    />
-                ))}
-            </div> */}
 
-            <div className="flex-col flex space-y-[2rem">
-                {checklist.map((item) => (
-                    <div className="]">
+            <div className=" space-y-[2rem] text-[1.375rem] pt-[2rem]">
+                {checklist.map((list) => (
+                    <>
                         <FormInput
+                            key={list.id}
                             type="checkbox"
-                            name={item.name}
-                            label={item.label}
+                            name={list.name}
+                            label={list.label}
+                            style={{
+                                color: "blue",
+                                width: "20px",
+                                height: "20px",
+                            }}
                             hideLabel
-                            style={{ width: "24px", height: "24px" }}
-                        />
-                        <label className="text-[1.375rem] pt-[2rem]">
-                            {item.label}
-                        </label>
-                    </div>
+                        >
+                            {list.label}{" "}
+                        </FormInput>
+                    </>
                 ))}
             </div>
+
             <div className="w-full">
-                    <Pagination startNumber="2" endNumber="20" />
-                </div>
+                <Pagination startNumber="2" endNumber="20" />
+            </div>
         </BackgroundContent>
     );
 }

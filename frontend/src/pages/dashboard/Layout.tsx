@@ -28,8 +28,8 @@ export default function Layout() {
 
     return (
         <main className="w-full min-h-screen flex justify-start items-start">
-            <section className="w-[17%] h-full min-h-screen bg-primary py-4 px-5 flex flex-col justify-start items-center">
-                <div className="w-20 h-20 mb-5">
+            <section className="w-[17%] h-full min-h-screen bg-primary py-4 px-5 flex flex-col justify-start items-center ">
+                <div className="w-20 h-20 mb-5 ">
                     <img
                         src={Logo}
                         alt="logo"

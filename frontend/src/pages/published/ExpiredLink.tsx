@@ -6,7 +6,8 @@ export default function ExpiredLink() {
     const { Expired } = Images;
     return (
         <BackgroundContent>
-            <div className="py-[9rem] flex-col flex  gap-5 ">
+            
+            <div className="py-[9rem] flex-col flex  gap-5">
                 <div className=" flex justify-center items-center">
                     <img src={Expired} />
                 </div>

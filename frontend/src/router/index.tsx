@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { AuthLayout } from "../pages/auth";
 import { PublishedLayout } from "../pages/published";
 import { DashboardLayout } from "../pages/dashboard";
+import { Error } from "../pages/error"
 
 import Home from "../pages/Home";
 
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Home />,
+        errorElement: <Error />
     },
     {
         path: "/",
@@ -30,6 +32,8 @@ const router = createBrowserRouter([
         element: <PublishedLayout />,
         children: publishedRoutes,
     },
+    
+    
 ]);
 
 export default router;

@@ -6,9 +6,9 @@ type props = {
 
 const Background = ({ children }: props) => {
     return (
-        <section className="h-full">
-            <div className="flex justify-center h-full">
-                <div className="w-[53.75rem] h-[37.5rem] bg-[#FFF] rounded-xl shadow-topshad">
+        <section className="min-h-screen flex justify-center items-center ">
+            <div className="flex justify-center  h-full ">
+                <div className="w-[53.75rem] h-[37.5rem] bg-[#FFF] rounded-xl shadow-topshad ">
                     {children}
                 </div>
             </div>

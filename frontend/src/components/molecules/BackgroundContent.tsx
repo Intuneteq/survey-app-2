@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import Background from "../organisms/Background";
-import  AnswerHead  from "./AnswerHead";
+import AnswerHead from "./AnswerHead";
 
 type props = {
     children?: ReactNode;
@@ -11,7 +11,7 @@ type props = {
 export default function BackgroundContent({ children, text, subtext }: props) {
     return (
         <Background>
-            <div className="h-full relative">
+            <div className="min-h-screen relative">
                 <AnswerHead text={text} subtext={subtext} />
                 <div className=" text-center py-[0.81rem]">{children}</div>
             </div>

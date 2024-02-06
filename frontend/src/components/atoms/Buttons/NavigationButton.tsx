@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-
 type props = {
     text: string;
     width?: string;
@@ -7,6 +6,7 @@ type props = {
     backgroundColor?: string;
     borderRadius?: string;
     color?: string;
+    border?: string;
     children?: ReactNode;
 };
 
@@ -17,6 +17,7 @@ export default function NavigationButton({
     text,
     borderRadius,
     color,
+    border,
     children,
 }: props) {
     return (
@@ -27,6 +28,7 @@ export default function NavigationButton({
                 borderRadius,
                 backgroundColor,
                 color,
+                border,
             }}
         >
             {text} {children}
