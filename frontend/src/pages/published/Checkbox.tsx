@@ -42,14 +42,16 @@ export default function Checkbox() {
                 </h3>
             </div>
             <div className="space-y-[2rem] text-[1.375rem] pt-[2rem]">
-                {sublist.map((item) => (
-                    <FormInput
-                        key={item.id}
-                        type="radio"
-                        name={item.category}
-                        label={item.label}
-                        hideLabel
-                    />
+                {sublist.map((list) => (
+                    <>
+                        <FormInput
+                            key={list.id}
+                            type="radio"
+                            name={list.category}
+                            label={list.label}
+                            hideLabel
+                        />
+                    </>
                 ))}
             </div>
             <div className="w-full ">
