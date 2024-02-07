@@ -3,17 +3,19 @@ import { Images } from "../../assets";
 import { NavigationButton } from "../../components/atoms";
 export default function Error() {
     const error = useRouteError();
-    console.error(error);
+    const currentError = error as CustomError;
 
     const { errorImage } = Images;
+
     return (
-        <div className="bg-[gold] min-h-screen flex justify-center text-center items-center ">
+        <main className="bg-primary min-h-screen flex justify-center text-center items-center py-[100px]">
             <div>
                 <div className="w-full flex justify-center items-center ">
+                    {/* DON'T USE IMAGE HERE, DESIGN THE TEXT WITH CSS */}
                     <img src={errorImage} />
                 </div>
                 <div className="w-[46rem] ">
-                    <h2 className="text-[3rem]">Page not Found</h2>
+                    <h2 className="text-[3rem]">{currentError.statusText}</h2>
                     <p className="text-[2rem]">
                         The page you are looking for may have been removed.
                         Please check the survey link or contact support for
@@ -30,6 +32,6 @@ export default function Error() {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }

@@ -85,107 +85,76 @@ export default function Surveys() {
     ];
 
     return (
-        <section>
-            <div className="px-5">
-                <div className="flex gap-2 p-5">
-                    <SurveyIcon fill="black" className="w-8 h-8" />
-                    <h1 className="text-xl">Surveys</h1>
-                </div>
-                <div className="flex justify-end">
-                    <div className=" flex-col flex gap-4">
-                        <NavigationButton
-                            text="Create Survey"
-                            width="20.624rem"
-                            height="3.75rem"
-                            backgroundColor="#1D2827"
-                            color="#FFF5C1"
-                            borderRadius="0.5rem"
+        <section className="px-5">
+            <div className="flex gap-2 p-5">
+                <SurveyIcon fill="black" className="w-8 h-8" />
+                <h1 className="text-xl">Surveys</h1>
+            </div>
+            <div className="flex justify-end">
+                <div className=" flex-col flex gap-4">
+                    <NavigationButton
+                        text="Create Survey"
+                        width="20.624rem"
+                        height="3.75rem"
+                        backgroundColor="#1D2827"
+                        color="#FFF5C1"
+                        borderRadius="0.5rem"
+                    />
+                    <div className=" flex relative">
+                        <FormInput
+                            type="text"
+                            name="search"
+                            placeholder="Search Survey"
+                            label="search"
+                            hideLabel
+                            className="placeholder:text-[#817F7F] pl-[1.25rem] "
+                            style={{
+                                width: "20.624rem",
+                                height: "3.75rem",
+                                color: "#817F7F",
+                            }}
                         />
-                        <div className=" flex relative">
-                            <FormInput
-                                type="text"
-                                name="search"
-                                placeholder="Search Survey"
-                                label="search"
-                                hideLabel
-                                className="placeholder:text-[#817F7F] pl-[1.25rem] "
-                                style={{
-                                    width: "20.624rem",
-                                    height: "3.75rem",
-                                    color: "#817F7F",
-                                }}
-                            />
-                            <FontAwesomeIcon
-                                icon={faSearch}
-                                color="black"
-                                className="w-5 h-5 absolute right-4 bottom-1/2 translate-y-1/2"
-                            />
-                        </div>
+                        <FontAwesomeIcon
+                            icon={faSearch}
+                            color="black"
+                            className="w-5 h-5 absolute right-4 bottom-1/2 translate-y-1/2"
+                        />
                     </div>
                 </div>
-                <div className=" py-6 ">
-                    {/* {surveylist.map((list) => (
-                        <div className="flex justify-between text-center h-[3.5rem] items-center liner">
-                            <div>
-                                <p>{list.id}</p>
-                            </div>
-                            <div>
-                                <h3>Survey Name</h3>
-                                <p>{list.name}</p>
-                            </div>
-                            <div>
-                                <h3>Questions</h3>
-                                <p>{list.question}</p>
-                            </div>
-                            <div>
-                                <h3>Responses</h3>
-                                <p>{list.response}</p>
-                            </div>
-                            <div>
-                                <h3>Created</h3>
-                                <p>{list.created}</p>
-                            </div>
-                            <div>
-                                <h3>Updated</h3>
-                                <p>{list.updated}</p>
-                            </div>
-                        </div>
-
-                       
-                    ))} */}
-                    <div>
-                        <table className="table-auto w-full text-center">
-                            <thead className="">
-                                <tr>
-                                    <th></th>
-                                    <th>Survey Name</th>
-                                    <th>Questions</th>
-                                    <th>Responses</th>
-                                    <th>Created</th>
-                                    <th>Updated</th>
+            </div>
+            <div className="py-6">
+                <div>
+                    <table className="table-auto w-full text-center">
+                        <thead className="">
+                            <tr>
+                                <th></th>
+                                <th>Survey Name</th>
+                                <th>Questions</th>
+                                <th>Responses</th>
+                                <th>Created</th>
+                                <th>Updated</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {surveylist.map((list) => (
+                                <tr className="h-[3.5rem] border">
+                                    <td>
+                                        <img src={dashIcon} />
+                                    </td>
+                                    <td>{list.name}</td>
+                                    <td>{list.question}</td>
+                                    <td>{list.response}</td>
+                                    <td>{list.created}</td>
+                                    <td>{list.updated}</td>
+                                    <td>
+                                        <button className="text-[1.75rem]">
+                                            ...
+                                        </button>
+                                    </td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                {surveylist.map((list) => (
-                                    <tr className="h-[3.5rem] border">
-                                        <td>
-                                            <img src={dashIcon} />
-                                        </td>
-                                        <td>{list.name}</td>
-                                        <td>{list.question}</td>
-                                        <td>{list.response}</td>
-                                        <td>{list.created}</td>
-                                        <td>{list.updated}</td>
-                                        <td>
-                                            <button className="text-[1.75rem]">
-                                                ...
-                                            </button>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>

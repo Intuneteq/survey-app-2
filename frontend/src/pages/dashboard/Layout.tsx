@@ -26,6 +26,8 @@ export default function Layout() {
     const [isHovered, setIsHovered] = useState("");
     const [active, setActive] = useState("");
 
+    // const { pathname } = useLocation();
+
     return (
         <main className="w-full min-h-screen flex justify-start items-start">
             <section className="w-[17%] h-full min-h-screen bg-primary py-4 px-5 flex flex-col justify-start items-center ">
@@ -63,8 +65,10 @@ export default function Layout() {
                                 if (isActive) {
                                     setActive(link.id);
                                 }
-                                return `flex justify-start items-center gap-2 text-secondary ${
-                                    isActive ? "text-[#0A8347]" : ""
+                                return `flex justify-start items-center gap-2 ${
+                                    isActive
+                                        ? "text-[#0A8347]"
+                                        : "text-secondary"
                                 } hover:text-[#6E6E6E]`;
                             }}
                             onMouseEnter={() => setIsHovered(link.id)}
@@ -88,7 +92,7 @@ export default function Layout() {
                 </div>
             </section>
 
-            <section className="w-[83%] scroll-vertical min-h-screen h-full">
+            <section className="w-[83%] scroll-vertical h-screen">
                 <Outlet />
             </section>
         </main>
