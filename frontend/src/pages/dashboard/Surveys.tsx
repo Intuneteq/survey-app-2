@@ -1,7 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-
-import { Button, FormInput, SurveyIcon } from "../../components/atoms";
+import { Button, SurveyIcon } from "../../components/atoms";
 import { SurveyPagination } from "../../components/molecules";
 
 import { Images } from "../../assets";
@@ -23,35 +20,15 @@ export default function Surveys() {
                 <SurveyIcon fill="black" stroke="#0A8347" className="w-8 h-8" />
                 <h1 className="text-[2.625rem]">Surveys</h1>
             </div>
-            <div className="flex-col flex justify-end items-end gap-4 mb-6">
+            <div className="flex-col flex justify-end items-end gap-4 mb-6 mr-14">
                 <Button
                     type="button"
                     scheme="primary"
-                    className="w-[20.624rem] h-[3.75rem] rounded-[0.5rem]"
+                    className="h-[3.75rem] rounded-[0.5rem] w-[13.75rem] shadow-md"
                     style={{ color: "#FFF5C1", backgroundColor: "#1D2827" }}
                 >
                     Create Survey
                 </Button>
-                <div className=" flex relative">
-                    <FormInput
-                        type="text"
-                        name="search"
-                        placeholder="Search Survey"
-                        label="search"
-                        hideLabel
-                        className="placeholder:text-[#817F7F] pl-[1.25rem] "
-                        style={{
-                            width: "20.624rem",
-                            height: "3.75rem",
-                            color: "#817F7F",
-                        }}
-                    />
-                    <FontAwesomeIcon
-                        icon={faSearch}
-                        color="black"
-                        className="w-5 h-5 absolute right-4 bottom-1/2 translate-y-1/2"
-                    />
-                </div>
             </div>
             <table className="table-auto w-full text-center border-separate border-spacing-y-[8px]">
                 <thead>
@@ -68,7 +45,7 @@ export default function Surveys() {
                     {currentItems.map((list) => (
                         <tr key={list.id} className="h-[3.5rem]">
                             <td className="border-r-0 border-t border-b border-l">
-                                <img src={dashIcon} />
+                                <img src={dashIcon} alt="thumbnail" />
                             </td>
                             <td className="border-t border-b">{list.name}</td>
                             <td className="border-t border-b">

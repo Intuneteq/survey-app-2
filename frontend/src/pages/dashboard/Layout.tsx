@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import { Images } from "../../assets";
-import { DashboardIcon, SurveyIcon } from "../../components/atoms";
+import { DashboardIcon, FormInput, SurveyIcon } from "../../components/atoms";
 
 const navLinks = [
     {
@@ -28,16 +28,22 @@ export default function Layout() {
 
     return (
         <main className="w-full min-h-screen flex justify-start items-start">
-            <section className="w-[17%] h-full min-h-screen bg-primary py-4 px-5 flex flex-col justify-start items-center ">
-                <div className="w-20 h-20 mb-5 ">
-                    <img
-                        src={Logo}
-                        alt="logo"
-                        className="w-full h-full object-contain"
-                    />
+            <section className="w-[17%] scroll-vertical h-screen bg-primary py-4 px-5 flex flex-col justify-start items-center ">
+                <div className="flex justify-center items-center gap-2 w-full mb-10">
+                    <div className="w-[30px] h-[30px]">
+                        <img
+                            src={Logo}
+                            alt="logo"
+                            className="w-full h-full object-contain"
+                        />
+                    </div>
+                    <h1 className="text-xl font-black flex justify-center items-center gap-0">
+                        <span className="text-tertiary">Survey</span>
+                        <span className="text-secondary">Lite</span>
+                    </h1>
                 </div>
 
-                <div className="w-full flex justify-center gap-1 items-center mb-16">
+                <div className="w-full flex justify-center gap-5 items-center mb-10">
                     <div className="w-10 h-10 rounded-full flex justify-center items-center">
                         <img
                             src={User}
@@ -45,16 +51,38 @@ export default function Layout() {
                             className="w-full h-full object-contain rounded-full"
                         />
                     </div>
-                    <small className="font-medium text-base xl:text-xl text-[#1D2827]">
-                        Dante Silver
-                    </small>
+                    <div className="flex flex-col justify-start items-start">
+                        <p className="font-medium text-base xl:text-xl text-[#1D2827]">
+                            Dante Silver
+                        </p>
+                        <small className="text-[8px]">
+                            Dante.Silver@gmail.com
+                        </small>
+                    </div>
+                </div>
+
+                <div className=" flex relative mb-10">
+                    <FormInput
+                        type="text"
+                        name="search"
+                        placeholder="Search Survey"
+                        label="search"
+                        hideLabel
+                        className="placeholder:text-[#817F7F] pl-[1.25rem] rounded-[5px]"
+                        style={{
+                            height: "2.5rem",
+                            color: "#817F7F",
+                            fontSize: "12px",
+                        }}
+                    />
                     <FontAwesomeIcon
-                        className="w-[24px] h-[24px]"
-                        icon={faCaretDown}
+                        icon={faSearch}
+                        color="black"
+                        className="w-4 h-4 absolute right-4 bottom-1/2 translate-y-1/2"
                     />
                 </div>
 
-                <div className="max-w-[9rem] flex flex-col items-start justify-start gap-y-7 w-full">
+                <div className="max-w-[9rem] flex flex-col items-start justify-start gap-y-7 w-full mb-[15rem] xl:mb-[30rem]">
                     {navLinks.map((link) => (
                         <NavLink
                             key={link.id}
@@ -90,6 +118,13 @@ export default function Layout() {
                         </NavLink>
                     ))}
                 </div>
+
+                <hr className="border-t-2 border-[#1D282780] shadow-md w-full mb-5" />
+
+                <button type="button" className="flex justify-start items-center gap-2 w-full hover:text-[#6E6E6E]">
+                    <SurveyIcon className="w-6 h-6" fill="#1D2827" />
+                    <span className="font-medium text-lg xl:text-2xl">Log Out</span>
+                </button>
             </section>
 
             <section className="w-[83%] h-screen">
