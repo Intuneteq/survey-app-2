@@ -1,4 +1,4 @@
-export default function SurveyIcon({ className, fill }: Svg) {
+export default function SurveyIcon({ className, fill, stroke }: Svg) {
     return (
         <svg
             className={className}
@@ -18,12 +18,12 @@ export default function SurveyIcon({ className, fill }: Svg) {
                 cy="1.92"
                 r="1.67"
                 fill={fill}
-                stroke="white"
+                stroke={stroke ?? "white"}
                 strokeWidth="0.5"
             />
             <path
                 d="M14.3508 9.95181C13.941 10.9872 12.7644 11.4885 11.7338 11.0667L9.77977 10.2672C8.7493 9.84547 7.57285 10.3465 7.16285 11.3817L5.61081 15.3003C5.33289 16.002 5.67155 16.7967 6.37019 17.0822C7.07975 17.3722 7.88953 17.027 8.17164 16.3143L8.68859 15.0083C9.09843 13.9729 10.275 13.4716 11.3057 13.8933L13.2597 14.6929C14.2901 15.1146 15.4666 14.6136 15.8766 13.5784L17.4286 9.65975C17.7065 8.95805 17.3679 8.16339 16.6692 7.87786C15.9597 7.58788 15.1499 7.93308 14.8678 8.64581L14.3508 9.95181Z"
-                fill="white"
+                fill={stroke ?? "white"}
             />
         </svg>
     );

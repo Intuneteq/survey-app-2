@@ -29,3 +29,12 @@ type CustomError = {
     statusText: string;
     message?: string;
 };
+
+type SurveyList = {
+    id: number;
+    name: string;
+    question: string;
+    response: string;
+    created: string;
+    updated: string;
+};

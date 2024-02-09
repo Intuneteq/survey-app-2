@@ -92,7 +92,7 @@ export default function Layout() {
                 </div>
             </section>
 
-            <section className="w-[83%] scroll-vertical h-screen">
+            <section className="w-[83%] h-screen">
                 <Outlet />
             </section>
         </main>
