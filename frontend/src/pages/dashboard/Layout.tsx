@@ -10,7 +10,7 @@ const navLinks = [
     {
         id: "1",
         name: "Dashboard",
-        path: "/dashboard",
+        path: "home",
         icon: DashboardIcon,
     },
     {
@@ -25,8 +25,6 @@ export default function Layout() {
     const { Logo, User } = Images;
     const [isHovered, setIsHovered] = useState("");
     const [active, setActive] = useState("");
-
-    // const { pathname } = useLocation();
 
     return (
         <main className="w-full min-h-screen flex justify-start items-start">
@@ -62,6 +60,8 @@ export default function Layout() {
                             key={link.id}
                             to={link.path}
                             className={({ isActive }) => {
+                                console.log(link.id, isActive);
+
                                 if (isActive) {
                                     setActive(link.id);
                                 }
