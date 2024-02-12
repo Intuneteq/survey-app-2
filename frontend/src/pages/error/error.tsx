@@ -1,18 +1,20 @@
 import { useRouteError } from "react-router-dom";
-import { Images } from "../../assets";
 import { NavigationButton } from "../../components/atoms";
 export default function Error() {
     const error = useRouteError();
     const currentError = error as CustomError;
 
-    const { errorImage } = Images;
-
     return (
         <main className="bg-primary min-h-screen flex justify-center text-center items-center py-[100px]">
             <div>
-                <div className="w-full flex justify-center items-center ">
-                    {/* DON'T USE IMAGE HERE, DESIGN THE TEXT WITH CSS */}
-                    <img src={errorImage} />
+                <div className="w-full flex justify-center items-center relative  h-[15rem]">
+                    <h1 className="text-[12.5rem]  font-[800] opacity-10 absolute top-4">
+                        404
+                    </h1>
+                    <h1 className="text-[12.5rem]  font-[800] ">404</h1>
+                    <h1 className="text-[12.5rem]  font-[800] absolute opacity-10 bottom-4">
+                        404
+                    </h1>
                 </div>
                 <div className="w-[46rem] ">
                     <h2 className="text-[3rem]">{currentError.statusText}</h2>
@@ -26,7 +28,7 @@ export default function Error() {
                             text="Back To Homepage"
                             width="25rem"
                             height="3rem"
-                            border="3px solid green"
+                            border="3px solid #239D60"
                             borderRadius="0.625rem"
                         />
                     </div>
