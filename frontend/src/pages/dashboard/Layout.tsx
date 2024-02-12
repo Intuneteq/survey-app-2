@@ -44,7 +44,7 @@ export default function Layout() {
                 </div>
 
                 <div className="w-full flex justify-center gap-5 items-center mb-10">
-                    <div className="w-10 h-10 rounded-full flex justify-center items-center">
+                    <div className="w-11 h-11 rounded-full flex justify-center items-center">
                         <img
                             src={User}
                             alt="user"
@@ -55,7 +55,7 @@ export default function Layout() {
                         <p className="font-medium text-base xl:text-xl text-[#1D2827]">
                             Dante Silver
                         </p>
-                        <small className="text-[8px]">
+                        <small className="text-[8px] font">
                             Dante.Silver@gmail.com
                         </small>
                     </div>
@@ -68,7 +68,7 @@ export default function Layout() {
                         placeholder="Search Survey"
                         label="search"
                         hideLabel
-                        className="placeholder:text-[#817F7F] pl-[1.25rem] rounded-[5px]"
+                        className="placeholder:text-[#817F7F] pl-4 pr-[2.5rem] rounded-[5px] focus:border-[1.4px] focus:border-black"
                         style={{
                             height: "2.5rem",
                             color: "#817F7F",
