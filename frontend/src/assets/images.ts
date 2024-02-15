@@ -14,6 +14,15 @@ import Expired from "./download.png"
 import ClosedEye from "./eye-closed.png"
 import dashIcon from "./dashboardicon.png"
 import errorImage from "./404.png"
+import view from "./View.png"
+import publish from "./Vector.png"
+import del from "./Vectordelete.png"
+import surveyImage from "./Survey Image.png"
+import surveyBackground from "./Rectangle 90.png"
+import start from "./Starting.png"
+import typeimg from "./Type.png"
+import banner from "./Tick/Banner.png"
+
  
 // Make sure us export it by passing it into this images object.
 const Images = {
@@ -32,6 +41,15 @@ const Images = {
     ClosedEye,
     dashIcon,
     errorImage,
+    view,
+    publish,
+    del,
+    surveyImage,
+    surveyBackground,
+    start,
+    typeimg,
+    banner
 };
+
 
 export default Images;

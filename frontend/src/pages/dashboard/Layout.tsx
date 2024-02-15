@@ -9,13 +9,13 @@ import { DashboardIcon, FormInput, SurveyIcon } from "../../components/atoms";
 const navLinks = [
     {
         id: "1",
-        name: "Dashboard",
+        name: "Overview",
         path: "home",
         icon: DashboardIcon,
     },
     {
         id: "2",
-        name: "Survey",
+        name: "Surveys",
         path: "survey",
         icon: SurveyIcon,
     },

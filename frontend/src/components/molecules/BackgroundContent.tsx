@@ -11,7 +11,7 @@ type props = {
 export default function BackgroundContent({ children, text, subtext }: props) {
     return (
         <Background>
-            <div className="min-h-screen relative">
+            <div className="min-h-[37.5rem] relative">
                 <AnswerHead text={text} subtext={subtext} />
                 <div className=" text-center py-[0.81rem]">{children}</div>
             </div>
