@@ -19,6 +19,9 @@ import publish from "./Vector.png"
 import del from "./Vectordelete.png"
 import surveyImage from "./Survey Image.png"
 import surveyBackground from "./Rectangle 90.png"
+import start from "./Starting.png"
+import typeimg from "./Type.png"
+import banner from "./Tick/Banner.png"
 
  
 // Make sure us export it by passing it into this images object.
@@ -43,6 +46,9 @@ const Images = {
     del,
     surveyImage,
     surveyBackground,
+    start,
+    typeimg,
+    banner
 };
 
 
