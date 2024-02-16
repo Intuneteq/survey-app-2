@@ -11,7 +11,7 @@ type Props = {
 
     name: string;
 
-    label: string;
+    label?: string;
 
     placeholder?: string;
 
