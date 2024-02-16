@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FormInput } from "../../components/atoms";
 import { BackgroundContent } from "../../components/molecules";
 import { Pagination } from "../../components/organisms";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function Checkbox() {
     const sublist = [
@@ -37,7 +39,13 @@ export default function Checkbox() {
         >
             <div className=" flex pl-[4rem] ">
                 <h3 className="text-[1.735rem] flex items-center">
-                    <span className="text-[1.2rem] px-[1rem]">1 &gt; </span>{" "}
+                    <span className="text-[1.2rem] px-[1rem]">
+                        1{" "}
+                        <FontAwesomeIcon
+                            className="w-2 h-4 px-2"
+                            icon={faChevronRight}
+                        />{" "}
+                    </span>{" "}
                     Lorem ipsum dolor sit amet consectetur
                 </h3>
             </div>

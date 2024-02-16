@@ -1,6 +1,8 @@
 import { BackgroundContent } from "../../components/molecules";
 import { FormInput } from "../../components/atoms";
 import { Pagination } from "../../components/organisms";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons/faChevronRight";
 
 export default function Checkbox2() {
     const checklist = [
@@ -32,7 +34,13 @@ export default function Checkbox2() {
         >
             <div className=" flex pl-[4rem] ">
                 <h3 className="text-[1.735rem] flex items-center">
-                    <span className="text-[1.2rem] px-[1rem]">3 &gt; </span>{" "}
+                    <span className="text-[1.2rem] px-[1rem]">
+                        3{" "}
+                        <FontAwesomeIcon
+                            className="w-2 h-4 px-2"
+                            icon={faChevronRight}
+                        />{" "}
+                    </span>{" "}
                     Lorem ipsum dolor sit amet consectetur
                 </h3>
             </div>
