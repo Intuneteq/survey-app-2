@@ -1,8 +1,8 @@
-import { Button, SurveyIcon } from "../../components/atoms";
-import { SurveyPagination } from "../../components/molecules";
+import { Button, SurveyIcon } from "../../../components/atoms";
+import { SurveyPagination } from "../../../components/molecules";
 
-import { Images } from "../../assets";
-import { usePagination } from "../../hooks";
+import { Images } from "../../../assets";
+import { usePagination } from "../../../hooks";
 
 const { dashIcon } = Images;
 
@@ -22,7 +22,8 @@ export default function Surveys() {
             </div>
             <div className="flex-col flex justify-end items-end gap-4 mb-6 mr-14">
                 <Button
-                    type="button"
+                    type="link"
+                    href="create-survey"
                     scheme="primary"
                     className="h-[3.75rem] rounded-[0.5rem] w-[13.75rem] shadow-md"
                     style={{ color: "#FFF5C1", backgroundColor: "#1D2827" }}

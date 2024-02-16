@@ -10,8 +10,6 @@ import Home from "../pages/Home";
 import { authRoutes } from "./auth";
 import { publishedRoutes } from "./published";
 import { dashboardRoutes } from "./dashboard";
-import { CreateSurvey } from "../pages/createSurvey";
-import { createSurveyRoutes } from "./createSurvey";
 
 const router = createBrowserRouter([
     {
@@ -33,11 +31,6 @@ const router = createBrowserRouter([
         path: "/published",
         element: <PublishedLayout />,
         children: publishedRoutes,
-    },
-    {
-        path: "/createSurvey",
-        element: <CreateSurvey />,
-        children: createSurveyRoutes,
     },
 ]);
 

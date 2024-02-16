@@ -88,8 +88,6 @@ export default function Layout() {
                             key={link.id}
                             to={link.path}
                             className={({ isActive }) => {
-                                console.log(link.id, isActive);
-
                                 if (isActive) {
                                     setActive(link.id);
                                 }

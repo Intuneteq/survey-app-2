@@ -1,17 +1,15 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faArrowUpFromBracket,
     faTrashCan,
     faCirclePlus,
     faEllipsisVertical,
-    faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { Images } from "../../assets";
-import { PickImage } from "../../components/molecules";
-import { Button, SelectButton, FormInput } from "../../components/atoms";
-import { Background, Pagination } from "../../components/organisms";
+import { Images } from "../../../assets";
+import { PickImage } from "../../../components/molecules";
+import { Button, SelectButton } from "../../../components/atoms";
 
 const { view, surveyImage, surveyBackground, start, typeimg } = Images;
 
@@ -31,9 +29,9 @@ export default function CreateSurvey() {
                     &gt; <span className="text-light_grey">Survey Title</span>
                 </p>
 
-                <div className=" text-xl flex gap-5 text-grey font-normal">
+                <div className=" text-xl flex gap-5 text-grey font-normal h-full justify-center items-center">
                     {navLink.map((link) => (
-                        <NavLink key={link.id} to={link.path}>
+                        <NavLink className={({isActive}) => `${isActive ? "border-b-2 border-[#239D60]" : ""} h-full flex justify-center items-center`} key={link.id} to={link.path}>
                             {link.name}
                         </NavLink>
                     ))}
@@ -191,67 +189,7 @@ export default function CreateSurvey() {
 
                 {/* Content */}
                 <div className="w-full bg-published h-full scroll-vertical py-28 xl:py-44">
-                    <Background>
-                        <div className="w-full flex justify-start items-start flex-col px-[1.875rem]">
-                            <div className="w-full border-b border-black border-opacity-50 mt-[10px] pb-[1.688rem]">
-                                <FormInput
-                                    name="title"
-                                    type="text"
-                                    className="w-full text-black border-none text-center font-bold text-[2.5rem] placeholder:text-[#B3B3B3]"
-                                    placeholder="Survey Title"
-                                />
-                                <FormInput
-                                    name="title"
-                                    type="text"
-                                    className="w-full text-black border-none text-center font-normal text-[1.25rem] placeholder:text-[#B3B3B3]"
-                                    placeholder="Description (Optional)"
-                                />
-                            </div>
-
-                            {/* Question. It is subject to change */}
-                            <div className="flex justify-start items-start gap-5 w-full mt-3 pl-[5.5rem] pr-[2rem]">
-                                <div className="flex justify-start items-center pt-[0.25rem] gap-5">
-                                    <span className="text-xl font-medium">
-                                        2
-                                    </span>
-                                    <FontAwesomeIcon
-                                        className="w-[7px] h-[11px]"
-                                        icon={faChevronRight}
-                                    />
-                                </div>
-                                <div className="flex justify-start items-start flex-col gap-y-24 w-full">
-                                    <FormInput
-                                        type="text"
-                                        name="question"
-                                        className="text-3xl font-normal placeholder:text-[#B3B3B3] text-black p-0 border-none"
-                                        placeholder="Lorem ipsum dolor sit amet consectetur."
-                                        hideLabel
-                                    />
-                                    <div className="w-full">
-                                        <FormInput
-                                            type="text"
-                                            name="answer"
-                                            placeholder="Type your answer here"
-                                            label="answer"
-                                            hideLabel
-                                            readOnly
-                                            className="w-full placeholder:text-black placeholder:text-opacity-30"
-                                            style={{
-                                                color: "black",
-                                                border: "none",
-                                                borderBottom:
-                                                    "1px solid #0000004D",
-                                                borderRadius: "0",
-                                            }}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="w-full">
-                            <Pagination startNumber="2" endNumber="20" />
-                        </div>
-                    </Background>
+                    <Outlet />
                 </div>
             </div>
         </main>
@@ -269,7 +207,7 @@ const questionlist = [
 const navLink = [
     { id: 2, name: "Design", path: "design" },
     { id: 1, name: "Share", path: "share" },
-    { id: 3, name: "Result", path: "share" },
+    { id: 3, name: "Result", path: "result" },
 ];
 
 // const questionType: SelectOption[] = [
