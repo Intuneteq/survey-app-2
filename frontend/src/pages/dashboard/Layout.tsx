@@ -9,13 +9,13 @@ import { DashboardIcon, FormInput, SurveyIcon } from "../../components/atoms";
 const navLinks = [
     {
         id: "1",
-        name: "Dashboard",
+        name: "Overview",
         path: "home",
         icon: DashboardIcon,
     },
     {
         id: "2",
-        name: "Survey",
+        name: "Surveys",
         path: "survey",
         icon: SurveyIcon,
     },
@@ -88,8 +88,6 @@ export default function Layout() {
                             key={link.id}
                             to={link.path}
                             className={({ isActive }) => {
-                                console.log(link.id, isActive);
-
                                 if (isActive) {
                                     setActive(link.id);
                                 }
@@ -121,9 +119,14 @@ export default function Layout() {
 
                 <hr className="border-t-2 border-[#1D282780] shadow-md w-full mb-5" />
 
-                <button type="button" className="flex justify-start items-center gap-2 w-full hover:text-[#6E6E6E]">
+                <button
+                    type="button"
+                    className="flex justify-start items-center gap-2 w-full hover:text-[#6E6E6E]"
+                >
                     <SurveyIcon className="w-6 h-6" fill="#1D2827" />
-                    <span className="font-medium text-lg xl:text-2xl">Log Out</span>
+                    <span className="font-medium text-lg xl:text-2xl">
+                        Log Out
+                    </span>
                 </button>
             </section>
 

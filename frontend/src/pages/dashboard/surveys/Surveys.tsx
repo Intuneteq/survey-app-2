@@ -1,8 +1,8 @@
-import { Button, SurveyIcon } from "../../components/atoms";
-import { SurveyPagination } from "../../components/molecules";
+import { Button, SurveyIcon } from "../../../components/atoms";
+import { SurveyPagination } from "../../../components/molecules";
 
-import { Images } from "../../assets";
-import { usePagination } from "../../hooks";
+import { Images } from "../../../assets";
+import { usePagination } from "../../../hooks";
 
 const { dashIcon } = Images;
 
@@ -18,11 +18,12 @@ export default function Surveys() {
         <section className="px-[0.625rem] xl:pr-10 py-[1.563rem] h-full scroll-vertical">
             <div className="flex gap-2 items-center justify-start">
                 <SurveyIcon fill="black" stroke="#0A8347" className="w-8 h-8" />
-                <h1 className="text-[2.625rem]">Surveys</h1>
+                <h1 className="text-[2.625rem]">My Surveys</h1>
             </div>
             <div className="flex-col flex justify-end items-end gap-4 mb-6 mr-14">
                 <Button
-                    type="button"
+                    type="link"
+                    href="create-survey"
                     scheme="primary"
                     className="h-[3.75rem] rounded-[0.5rem] w-[13.75rem] shadow-md"
                     style={{ color: "#FFF5C1", backgroundColor: "#1D2827" }}

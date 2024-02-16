@@ -8,6 +8,7 @@ type props = {
     color?: string;
     border?: string;
     children?: ReactNode;
+    padding?: string;
 };
 
 export default function NavigationButton({
@@ -19,6 +20,7 @@ export default function NavigationButton({
     color,
     border,
     children,
+    padding,
 }: props) {
     return (
         <button
@@ -29,6 +31,7 @@ export default function NavigationButton({
                 backgroundColor,
                 color,
                 border,
+                padding,
             }}
         >
             {text} {children}

@@ -15,6 +15,7 @@ export default {
                 tertiary: "#239D60",
                 white: "#FFF",
                 grey: "#BDBBBB",
+                light_grey: "#777777",
                 black: "#000",
             },
 

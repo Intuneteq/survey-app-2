@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 import { isURL, toMail } from "../../lib/utilities";
-import { CSSProperties } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 type Props = {
     /** Type of HTML element - button element, anchor element or React Link */
@@ -19,7 +19,7 @@ type Props = {
     height?: string;
 
     /** React child component */
-    children: React.ReactNode;
+    children: ReactNode;
 
     /** Disable button*/
     disabled?: boolean;
